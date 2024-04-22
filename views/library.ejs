@@ -1,0 +1,18 @@
+<%- include("./partials/header.ejs") %>
+
+<%- include("./nav.ejs") %>
+<% books.forEach((book, index) => {%>
+    <div class="card mt-2 mx-3" style="width: 18rem;">
+        <div class="card-body">
+          <img width="250" src="/images/<%= book.image %>" alt="">
+          <h5 class="card-title"><%= book.bookname %></h5>
+          <h6 class="card-subtitle mb-2 text-body-secondary"><%= book.author %></h6>
+          <h6 class="card-subtitle text-body-secondary"><%= book.price %></h6>
+          <p class="card-text"><%= book.description %></p>
+          <a href="/delete/<%= book._id %>" class="card-link">Delete Book</a>
+          <a href="/update/<%= book._id %>" class="card-link">Update Book</a>
+        </div>
+      </div>
+      <br>
+<%}); %>
+<%- include("./partials/footer.ejs") %>

@@ -1,0 +1,68 @@
+<%- include("./partials/header.ejs") %> 
+<%- include("./nav.ejs") %>
+
+<form action="/create" class="mt-5" method="post" enctype="multipart/form-data"
+  <div class="mb-3 px-5">
+    <label for="exampleFormControlInput1" class="form-label"
+      >Enter Book Name</label
+    >
+    <input
+      type="text"
+      class="form-control"
+      placeholder="Enter Book Name"
+      name="bookname"
+    />
+  </div>
+  <div class="mb-3 px-5">
+    <label for="exampleFormControlInput1" class="form-label"
+      >Image</label
+    >
+    <input
+      type="file"
+      class="form-control"
+      id="exampleFormControlInput1"
+      name="image"
+    />
+  </div>
+
+  <div class="mb-3 px-5">
+    <label for="exampleFormControlInput1" class="form-label"
+      >Enter Book author</label
+    >
+    <input
+      type="text"
+      class="form-control"
+      id="exampleFormControlInput1"
+      placeholder="Enter Book Author"
+      name="author"
+    />
+  </div>
+
+  <div class="mb-3 px-5">
+    <label for="exampleFormControlInput1" class="form-label"
+      >Enter Book Price</label
+    >
+    <input
+      type="text"
+      class="form-control"
+      id="exampleFormControlInput1"
+      placeholder="Enter Book Price"
+      name="price"
+    />
+  </div>
+
+  <div class="mb-3 px-5">
+    <label for="exampleFormControlTextarea1" class="form-label"
+      >Enter Description</label
+    >
+    <textarea
+      class="form-control"
+      id="exampleFormControlTextarea1"
+      rows="3"
+      name="description"
+    ></textarea>
+  </div>
+  <button class="btn btn-primary mx-5">Submit</button>
+</form>
+
+<%- include("./partials/footer.ejs") %>
