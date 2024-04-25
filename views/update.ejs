@@ -3,6 +3,7 @@
 <%- include("./partials/header.ejs") %> 
 
 <form action="/update/<%= books._id %>" class="mt-5" method="post">
+  <img src="images/<%= books.image %>" alt="">
     <div class="mb-3 px-5">
       <label for="exampleFormControlInput1" class="form-label"
         >Enter Book Name</label
